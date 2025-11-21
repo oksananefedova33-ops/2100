@@ -1,0 +1,48 @@
+/* /ui/export-stats-domain/export-stats-domain.css */
+/**
+ * Стили для поля "Домен для статистики" в модалке экспорта.
+ * Примечание: Стили добавляются inline в JS для простоты,
+ * но можно вынести сюда если нужна централизованная стилизация.
+ */
+
+/* Базовые стили input для полей в модалке */
+#expStatsDomain {
+  width: 100%;
+  padding: 8px 12px;
+  background: #0f1723;
+  color: #ffffff;
+  border: 1px solid #2d4263;
+  border-radius: 8px;
+  font-size: 13px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#expStatsDomain:focus {
+  outline: none;
+  border-color: #3a78f2;
+  box-shadow: 0 0 0 2px rgba(58, 120, 242, 0.2);
+}
+
+#expStatsDomain::placeholder {
+  color: #9fb2c6;
+  opacity: 0.85;
+}
+
+/* Подсказка под полем */
+.export-stats-domain-hint {
+  font-size: 12px;
+  color: #9fb2c6;
+  margin-top: 6px;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.export-stats-domain-hint::before {
+  content: "ℹ️";
+  flex-shrink: 0;
+  margin-top: 1px;
+}

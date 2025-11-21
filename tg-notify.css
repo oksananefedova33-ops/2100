@@ -1,0 +1,198 @@
+/* Стили модального окна уведомлений - ИЗОЛИРОВАННАЯ ВЕРСИЯ */
+.tg-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.tg-backdrop.hidden {
+    display: none;
+}
+
+.tg-modal {
+    width: 500px;
+    max-width: 90vw;
+    max-height: 80vh;
+    background: #0f1622;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.tg-modal__header {
+    padding: 20px;
+    border-bottom: 1px solid #1f2b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tg-modal__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Изолируем стиль кнопки закрытия только для модала */
+.tg-modal .tg-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #2a3441;
+    background: #1a2533;
+    color: #9fb2c6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.tg-modal .tg-close:hover {
+    background: #2a3441;
+    color: #ffffff;
+}
+
+.tg-modal__body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.tg-modal .tg-section {
+    margin-bottom: 24px;
+}
+
+.tg-modal .tg-label {
+    display: block;
+    color: #9fb2c6;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Изолируем стили инпутов только для модала */
+.tg-modal .tg-input {
+    width: 100%;
+    padding: 10px 14px;
+    background: #111925;
+    border: 1px solid #213247;
+    border-radius: 10px;
+    color: #e4eef9;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.tg-modal .tg-input:focus {
+    outline: none;
+    border-color: #2ea8ff;
+    box-shadow: 0 0 0 3px rgba(46,168,255,.1);
+}
+
+.tg-modal .tg-checkbox-group {
+    background: #111925;
+    border: 1px solid #213247;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.tg-modal .tg-checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.tg-modal .tg-checkbox-item:last-child {
+    margin-bottom: 0;
+}
+
+.tg-modal .tg-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.tg-modal .tg-checkbox-label {
+    color: #e4eef9;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.tg-modal .tg-checkbox-desc {
+    color: #6b7280;
+    font-size: 12px;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+.tg-modal .tg-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* ВАЖНО: Изолируем стили кнопок ТОЛЬКО для нашего модала */
+.tg-modal .tg-btn {
+    padding: 8px 12px !important; /* Возвращаем оригинальные размеры */
+    border-radius: 8px !important;
+    border: 1px solid #2a3441 !important;
+    background: #1a2533 !important;
+    color: #e4eef9 !important;
+    cursor: pointer !important;
+    font-size: 13px !important; /* Меньший размер шрифта */
+    font-weight: 500 !important;
+    transition: all 0.2s !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+}
+
+.tg-modal .tg-btn:hover {
+    background: #2a3441 !important;
+}
+
+.tg-modal .tg-btn.primary {
+    background: #2ea8ff !important;
+    border-color: #1e98ef !important;
+    color: #ffffff !important;
+}
+
+.tg-modal .tg-btn.primary:hover {
+    background: #1e98ef !important;
+}
+
+.tg-modal .tg-btn.danger {
+    background: #dc2626 !important;
+    border-color: #991b1b !important;
+    color: #ffffff !important;
+}
+
+.tg-modal .tg-status {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.tg-modal .tg-status.success {
+    background: rgba(16,185,129,.1);
+    color: #10b981;
+}
+
+.tg-modal .tg-status.error {
+    background: rgba(239,68,68,.1);
+    color: #ef4444;
+}
+
+/* Стиль для кнопки в тулбаре - используем существующий класс .btn */
+#btnTgNotify {
+    /* Наследует стили от .btn класса редактора */
+}
